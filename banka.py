@@ -1,4 +1,5 @@
 import os
+os.system("cls")
 
 class Musteri():
     def __init__(self,TC,ISIM,SIFRE):
@@ -44,11 +45,13 @@ while True:
                             os.system("cls")
                             print("""
                                         ZALEF BANKASINA HOŞ GELDİNİZ
+                                  
                                     0) Çıkış
                                     1) Bakiye Sorgula
                                     2) Para Yatır
                                     3) Para Transfer Et
-                                    4) Para Çek""")
+                                    4) Para Çek
+                                  """)
                             secim2 = input("İşlem numarasını giriniz : ")
                             if secim2 == "0":
                                 print("Hesabınızdan çıkış yapılıyor...")
@@ -59,7 +62,7 @@ while True:
                                 input(menu)
                             elif secim2 == "2":
                                 yatirilan_tutar = int(input("Miktar : "))
-                                onay = input("Kendi hesabınıza {} TL para yatırmayı onaylıyor musunuz? (E/H) : ")
+                                onay = input("Kendi hesabınıza {} TL para yatırmayı onaylıyor musunuz? (E/H) : ".format(yatirilan_tutar))
                                 if onay == "e"or onay=="E":
                                     musteri.bakiye += yatirilan_tutar
                                     print("Paranız yatırıldı.")
